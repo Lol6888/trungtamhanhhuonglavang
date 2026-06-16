@@ -215,6 +215,36 @@
   .reveal{opacity:0;transform:translateY(28px);transition:.8s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
 
+  /* ---------- AUDIO PLAYER ---------- */
+  .player{
+    position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;
+    background:rgba(27,42,91,.96);backdrop-filter:blur(8px);
+    border:1px solid rgba(196,160,53,.55);border-radius:50px;
+    box-shadow:0 16px 38px -14px rgba(0,0,0,.55);padding:6px;
+    max-width:62px;overflow:hidden;transition:max-width .45s cubic-bezier(.2,.7,.2,1)
+  }
+  .player.expanded,.player:hover{max-width:250px}
+  .player .pp{
+    width:50px;height:50px;border-radius:50%;flex:none;border:0;cursor:pointer;
+    background:var(--gold);color:var(--blue);display:grid;place-items:center;transition:.2s
+  }
+  .player .pp:hover{background:var(--gold-soft);transform:scale(1.05)}
+  .player .pp svg{width:20px;height:20px}
+  .player .i-pause{display:none}
+  .player.playing .i-play{display:none}
+  .player.playing .i-pause{display:block}
+  .player .meta{padding:0 18px 0 13px;color:#fff;white-space:nowrap}
+  .player .meta .t{font-size:.84rem;font-weight:600;color:var(--gold-soft);display:flex;align-items:center}
+  .player .meta .s{font-size:.68rem;color:rgba(255,255,255,.6);letter-spacing:.04em;margin-top:1px}
+  .eq{display:inline-flex;gap:2px;height:11px;align-items:flex-end;margin-right:8px}
+  .eq i{width:2px;background:var(--gold-soft);height:3px;border-radius:2px}
+  .player.playing .eq i{animation:eq .9s ease-in-out infinite}
+  .player.playing .eq i:nth-child(2){animation-delay:.25s}
+  .player.playing .eq i:nth-child(3){animation-delay:.45s}
+  .player.playing .eq i:nth-child(4){animation-delay:.12s}
+  @keyframes eq{0%,100%{height:3px}50%{height:11px}}
+  @media(max-width:640px){.player{right:14px;bottom:14px}}
+
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:900px){
     .about-grid,.guide-grid{grid-template-columns:1fr;gap:36px}
@@ -538,6 +568,19 @@
   </div>
 </footer>
 
+<!-- ============ NHẠC NỀN ============ -->
+<div class="player" id="player" title="Nhạc nền: Bình An Của Mẹ">
+  <button class="pp" id="ppBtn" aria-label="Phát hoặc tạm dừng nhạc nền">
+    <svg class="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+  </button>
+  <div class="meta">
+    <div class="t"><span class="eq"><i></i><i></i><i></i><i></i></span>Bình An Của Mẹ</div>
+    <div class="s">Nhạc nền · Thánh ca</div>
+  </div>
+</div>
+<audio id="bgAudio" src="audio/binh-an-cua-me.mp3" loop preload="auto"></audio>
+
 <script>
   // sticky nav background
   const nav=document.getElementById('nav');
@@ -554,6 +597,31 @@
     es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // background music player
+  (function(){
+    const audio=document.getElementById('bgAudio');
+    const player=document.getElementById('player');
+    const btn=document.getElementById('ppBtn');
+    audio.volume=0.45;
+    let collapseTimer;
+    function onPlay(){
+      player.classList.add('playing','expanded');
+      clearTimeout(collapseTimer);
+      collapseTimer=setTimeout(()=>player.classList.remove('expanded'),4000);
+    }
+    function play(){audio.play().then(onPlay).catch(()=>{});}
+    function pause(){audio.pause();player.classList.remove('playing');}
+    btn.addEventListener('click',()=>{audio.paused?play():pause();});
+    audio.addEventListener('pause',()=>player.classList.remove('playing'));
+    audio.addEventListener('play',onPlay);
+    // thử tự phát; nếu trình duyệt chặn thì phát khi người dùng tương tác lần đầu
+    audio.play().then(onPlay).catch(()=>{
+      const start=()=>{play();clean();};
+      const clean=()=>['pointerdown','keydown','scroll','touchstart'].forEach(e=>window.removeEventListener(e,start));
+      ['pointerdown','keydown','scroll','touchstart'].forEach(e=>window.addEventListener(e,start,{once:true,passive:true}));
+    });
+  })();
 </script>
 </body>
 </html>
