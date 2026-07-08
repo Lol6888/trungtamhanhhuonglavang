@@ -116,15 +116,9 @@ nav.nav.solid{background:rgba(10,10,10,.88);backdrop-filter:blur(20px);border-bo
 .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .proj-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--border);transition:.35s;cursor:pointer}
 .proj-card:hover{border-color:var(--border-h);box-shadow:var(--glow-p);transform:translateY(-4px)}
-.proj-visual{aspect-ratio:16/9;position:relative;overflow:hidden}
-.pv1{background:linear-gradient(135deg,#1a0533 0%,#2d1b69 40%,#1e3a8a 100%)}
-.pv2{background:linear-gradient(135deg,#042f2e 0%,#064e3b 40%,#1e3a5f 100%)}
-.pv3{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 40%,#1a3656 100%)}
-.pv4{background:linear-gradient(135deg,#1c1917 0%,#292524 40%,#1e2d40 100%)}
-.proj-visual::before{content:'';position:absolute;top:0;left:0;right:0;height:28px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
-.proj-visual::after{content:'';position:absolute;top:8px;left:12px;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);box-shadow:14px 0 0 rgba(255,255,255,.2),28px 0 0 rgba(255,255,255,.2)}
-.proj-decoration{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.25}
-.proj-decoration svg{width:45%;height:45%}
+.proj-visual{aspect-ratio:16/9;position:relative;overflow:hidden;background:#111}
+.proj-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s}
+.proj-card:hover .proj-visual img{transform:scale(1.06)}
 .proj-overlay{position:absolute;inset:0;background:rgba(7,2,20,.75);backdrop-filter:blur(3px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;opacity:0;transition:.3s}
 .proj-card:hover .proj-overlay{opacity:1}
 .btn-detail{background:var(--grad);color:#fff;padding:10px 24px;border-radius:50px;font-weight:600;font-size:.88rem;border:none;cursor:pointer;transition:.2s}
@@ -343,19 +337,31 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 0}
     </div>
     <div class="projects-grid">
       <article class="proj-card reveal" onclick="openModal('smartflow')">
-        <div class="proj-visual pv1"><div class="proj-decoration"><svg viewBox="0 0 200 120" fill="none"><rect x="20" y="15" width="160" height="90" rx="4" stroke="rgba(167,139,250,.4)" stroke-width="1"/><rect x="30" y="25" width="60" height="8" rx="2" fill="rgba(167,139,250,.25)"/><rect x="30" y="40" width="140" height="1" stroke="rgba(255,255,255,.07)"/><rect x="30" y="50" width="85" height="6" rx="1.5" fill="rgba(96,165,250,.2)"/><rect x="30" y="62" width="65" height="6" rx="1.5" fill="rgba(167,139,250,.15)"/><rect x="30" y="74" width="100" height="6" rx="1.5" fill="rgba(96,165,250,.15)"/><rect x="140" y="48" width="30" height="32" rx="3" fill="rgba(167,139,250,.12)" stroke="rgba(167,139,250,.2)" stroke-width="1"/></svg></div><div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div></div>
+        <div class="proj-visual">
+          <img src="images/projects/smartflow.jpg" alt="SmartFlow AI – Automation platform with React code on dark screen" />
+          <div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div>
+        </div>
         <div class="proj-info"><h3>SmartFlow AI</h3><div class="proj-tags"><span>#AI_Automation</span><span>#SaaS_Platform</span><span>#Python</span></div></div>
       </article>
       <article class="proj-card reveal" onclick="openModal('nexaui')">
-        <div class="proj-visual pv2"><div class="proj-decoration"><svg viewBox="0 0 200 120" fill="none"><rect x="20" y="15" width="70" height="90" rx="3" stroke="rgba(52,211,153,.35)" stroke-width="1"/><rect x="30" y="25" width="50" height="50" rx="2" fill="rgba(52,211,153,.1)"/><rect x="30" y="82" width="30" height="6" rx="1.5" fill="rgba(52,211,153,.25)"/><rect x="100" y="15" width="80" height="42" rx="3" stroke="rgba(96,165,250,.35)" stroke-width="1" fill="rgba(96,165,250,.05)"/><rect x="110" y="24" width="40" height="5" rx="1.5" fill="rgba(96,165,250,.3)"/><rect x="110" y="34" width="55" height="4" rx="1.5" fill="rgba(96,165,250,.15)"/><rect x="110" y="43" width="45" height="4" rx="1.5" fill="rgba(96,165,250,.1)"/><rect x="100" y="63" width="80" height="42" rx="3" stroke="rgba(52,211,153,.25)" stroke-width="1" fill="rgba(52,211,153,.04)"/></svg></div><div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div></div>
+        <div class="proj-visual">
+          <img src="images/projects/nexaui.jpg" alt="NexaUI Design System – Wireframe sketch and UI/UX design process" />
+          <div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div>
+        </div>
         <div class="proj-info"><h3>NexaUI Design System</h3><div class="proj-tags"><span>#Design_System</span><span>#React</span><span>#Figma</span></div></div>
       </article>
       <article class="proj-card reveal" onclick="openModal('botcore')">
-        <div class="proj-visual pv3"><div class="proj-decoration"><svg viewBox="0 0 200 120" fill="none"><circle cx="100" cy="60" r="28" stroke="rgba(167,139,250,.3)" stroke-width="1.5"/><circle cx="100" cy="60" r="16" stroke="rgba(96,165,250,.25)" stroke-width="1"/><circle cx="100" cy="60" r="5" fill="rgba(167,139,250,.5)"/><line x1="100" y1="32" x2="100" y2="20" stroke="rgba(167,139,250,.3)" stroke-width="1"/><line x1="128" y1="60" x2="140" y2="60" stroke="rgba(167,139,250,.3)" stroke-width="1"/><line x1="72" y1="60" x2="60" y2="60" stroke="rgba(167,139,250,.3)" stroke-width="1"/><circle cx="100" cy="18" r="4" fill="rgba(167,139,250,.4)"/><circle cx="142" cy="60" r="4" fill="rgba(96,165,250,.4)"/><circle cx="58" cy="60" r="4" fill="rgba(52,211,153,.4)"/></svg></div><div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div></div>
+        <div class="proj-visual">
+          <img src="images/projects/botcore.jpg" alt="BotCore Assistant – AI chatbot dark mode interface" />
+          <div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div>
+        </div>
         <div class="proj-info"><h3>BotCore Assistant</h3><div class="proj-tags"><span>#AI_Chatbot</span><span>#NLP</span><span>#LangChain</span></div></div>
       </article>
       <article class="proj-card reveal" onclick="openModal('metrics')">
-        <div class="proj-visual pv4"><div class="proj-decoration"><svg viewBox="0 0 200 120" fill="none"><rect x="20" y="15" width="160" height="90" rx="4" stroke="rgba(96,165,250,.3)" stroke-width="1"/><line x1="20" y1="35" x2="180" y2="35" stroke="rgba(255,255,255,.06)" stroke-width="1"/><rect x="30" y="23" width="30" height="6" rx="1.5" fill="rgba(96,165,250,.3)"/><polyline points="30,90 55,70 80,78 110,52 140,60 165,38" stroke="rgba(96,165,250,.5)" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"/><polyline points="30,90 55,80 80,85 110,68 140,72 165,58" stroke="rgba(52,211,153,.35)" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/><rect x="30" y="45" width="18" height="40" rx="1.5" fill="rgba(96,165,250,.12)"/><rect x="55" y="55" width="18" height="30" rx="1.5" fill="rgba(96,165,250,.1)"/><rect x="80" y="60" width="18" height="25" rx="1.5" fill="rgba(52,211,153,.1)"/></svg></div><div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div></div>
+        <div class="proj-visual">
+          <img src="images/projects/metrics.jpg" alt="MetricsPro Dashboard – Analytics dashboard on laptop screen" />
+          <div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div>
+        </div>
         <div class="proj-info"><h3>MetricsPro Dashboard</h3><div class="proj-tags"><span>#Data_Analytics</span><span>#Dashboard</span><span>#Next.js</span></div></div>
       </article>
     </div>
@@ -391,7 +397,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 0}
       <div class="form-wrap reveal">
         <form id="contactForm">
           <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name" required /></div>
-          <div class="form-group"><label>Phone / Email</label><input type="text" placeholder="+84 xxx xxx xxx or email@company.com" required /></div>
+          <div class="form-group"><label>Phone / Email</label><input type="text" placeholder="0796 675 657 or email@company.com" required /></div>
           <div class="form-group"><label>Service of Interest</label><select><option value="">-- Select a service --</option><option>UI/UX Design</option><option>AI Solutions</option><option>Both</option></select></div>
           <div class="form-group"><label>Brief Message</label><textarea placeholder="Briefly describe your challenge or requirement..."></textarea></div>
           <button type="submit" class="btn-submit">SEND CONSULTATION REQUEST</button>
@@ -405,7 +411,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 0}
       <div class="contact-info reveal">
         <h3>Contact information</h3>
         <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M4 7l8 5.5L20 7"/></svg></div><div><div class="label">Email</div><div class="value">hello@tthhlavang.com</div></div></div>
-        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.07 3.38 2 2 0 0 1 3.05 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 17z"/></svg></div><div><div class="label">Hotline</div><div class="value">+84 xxx xxx xxx</div></div></div>
+        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.07 3.38 2 2 0 0 1 3.05 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 17z"/></svg></div><div><div class="label">Hotline</div><div class="value">0796 675 657</div></div></div>
         <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21s6.5-5.2 6.5-10.5a6.5 6.5 0 1 0-13 0C5.5 15.8 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.5"/></svg></div><div><div class="label">Office</div><div class="value">57 Street 60, Cat Lai Ward<br>Ho Chi Minh City, Vietnam</div></div></div>
         <div class="social-row"><div class="label">Follow us</div><div class="socials"><a href="#" class="soc-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" class="soc-btn" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a><a href="#" class="soc-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div></div>
       </div>
