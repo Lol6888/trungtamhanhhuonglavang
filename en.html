@@ -3,625 +3,462 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>La Vang Holy Land – National Shrine of Our Lady of La Vang | Quảng Trị, Vietnam</title>
+<title>TTHH LAVANG – AI & UI/UX Agency Vietnam | Technology & Transformation Hub</title>
+<meta name="description" content="TTHH LAVANG – Technology & Transformation Hub. Specializing in AI Automation, UI/UX Design and digital transformation for businesses. Free consultation within 2 business hours." />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="apple-touch-icon" href="favicon.svg" />
-<meta name="theme-color" content="#1b2a5b" />
-<meta name="description" content="The National Marian Shrine of the Catholic Church in Vietnam, in Quảng Trị — a place where faith, history and distinctive architecture meet. Pilgrim guide, Mass schedule and sacred sites." />
+<meta name="theme-color" content="#7C3AED" />
 <link rel="alternate" hreflang="vi" href="https://www.trungtamhanhhuonglavang.com/" />
 <link rel="alternate" hreflang="en" href="https://www.trungtamhanhhuonglavang.com/en.html" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"TTHH LAVANG","alternateName":"Technology & Transformation Hub LAVANG","url":"https://www.trungtamhanhhuonglavang.com","description":"AI & UI/UX Agency – specializing in process automation and digital brand identity for businesses in Vietnam.","areaServed":"VN","address":{"@type":"PostalAddress","streetAddress":"57 Street 60, Cat Lai Ward","addressLocality":"Ho Chi Minh City","addressCountry":"VN"},"serviceType":["AI Automation","UI/UX Design","Software Development","Branding & Digital Identity"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
-  :root{
-    --blue:#1b2a5b;
-    --blue-soft:#2c4078;
-    --gold:#c4a035;
-    --gold-soft:#e6cf8f;
-    --cream:#f7f3ea;
-    --ivory:#fbf9f3;
-    --ink:#23262e;
-    --muted:#5d6273;
-    --line:rgba(27,42,91,.12);
-    --shadow:0 18px 50px -22px rgba(27,42,91,.45);
-    --r:16px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;scroll-padding-top:78px}
-  body{
-    font-family:'Be Vietnam Pro',system-ui,sans-serif;
-    color:var(--ink);background:var(--ivory);line-height:1.7;
-    -webkit-font-smoothing:antialiased;overflow-x:hidden;
-  }
-  h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:600;line-height:1.2}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  .wrap{width:min(1180px,92%);margin-inline:auto}
-  .eyebrow{
-    display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.22em;
-    text-transform:uppercase;color:var(--gold);margin-bottom:14px;
-  }
-  .eyebrow::before{content:"✦";margin-right:10px;opacity:.7}
-
-  /* ---------- NAV ---------- */
-  header.nav{
-    position:fixed;top:0;left:0;right:0;z-index:50;
-    background:rgba(251,249,243,.0);transition:.35s;
-  }
-  header.nav.solid{
-    background:rgba(251,249,243,.92);backdrop-filter:blur(10px);
-    box-shadow:0 1px 0 var(--line);
-  }
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:600}
-  .brand .mark{
-    width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
-    background:linear-gradient(145deg,var(--blue),var(--blue-soft));
-    color:var(--gold-soft);font-family:'Playfair Display',serif;font-size:1.3rem;
-    border:1.5px solid var(--gold);flex:none;
-  }
-  .brand b{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--blue);line-height:1.1}
-  .brand span{display:block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
-  header.nav:not(.solid) .brand b{color:#fff}
-  header.nav:not(.solid) .brand span{color:rgba(255,255,255,.8)}
-  nav ul{display:flex;gap:30px;list-style:none;align-items:center}
-  nav a{font-size:.92rem;font-weight:500;color:var(--ink);transition:.2s;position:relative}
-  header.nav:not(.solid) nav a{color:rgba(255,255,255,.92)}
-  nav a:hover{color:var(--gold)}
-  .nav-cta{
-    background:var(--gold);color:var(--blue)!important;padding:9px 20px;border-radius:50px;
-    font-weight:600;font-size:.88rem;
-  }
-  .nav-cta:hover{background:var(--gold-soft)}
-  .nav-lang{border:1.5px solid currentColor;border-radius:50px;padding:5px 13px;font-size:.8rem;font-weight:600;letter-spacing:.05em;opacity:.85}
-  .nav-lang:hover{color:var(--gold);opacity:1}
-  .burger{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px;flex-direction:column;gap:5px;justify-content:center;align-items:center}
-  .burger span{width:24px;height:2px;background:#fff;transition:.3s}
-  header.nav.solid .burger span{background:var(--blue)}
-
-  /* ---------- HERO ---------- */
-  .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;text-align:center}
-  .hero-bg{position:absolute;inset:0;background:#10193a;}
-  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.55}
-  .hero-bg::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(180deg,rgba(16,25,58,.55) 0%,rgba(16,25,58,.35) 40%,rgba(16,25,58,.85) 100%);
-  }
-  .hero-in{position:relative;z-index:2;width:min(900px,92%);margin-inline:auto;padding:120px 0 90px}
-  .hero h1{font-size:clamp(2.4rem,6vw,4.6rem);letter-spacing:.5px;text-shadow:0 4px 30px rgba(0,0,0,.4)}
-  .hero h1 em{color:var(--gold-soft);font-style:italic}
-  .hero p.lead{
-    margin:26px auto 0;max-width:680px;font-size:clamp(1rem,2vw,1.18rem);
-    font-weight:300;color:rgba(255,255,255,.92);
-  }
-  .hero .ctas{margin-top:38px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-  .btn{
-    padding:14px 30px;border-radius:50px;font-weight:600;font-size:.98rem;
-    transition:.25s;border:1.5px solid transparent;cursor:pointer;
-  }
-  .btn-gold{background:var(--gold);color:var(--blue)}
-  .btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px)}
-  .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
-  .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
-  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.7);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase}
-  .scroll-cue::after{content:"";display:block;width:1px;height:34px;background:rgba(255,255,255,.5);margin:10px auto 0;animation:cue 1.8s infinite}
-  @keyframes cue{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
-
-  /* ---------- SECTION SHELL ---------- */
-  section{padding:96px 0}
-  .sec-head{text-align:center;max-width:740px;margin:0 auto 56px}
-  .sec-head h2{font-size:clamp(1.9rem,4vw,2.9rem);color:var(--blue)}
-  .sec-head p{margin-top:16px;color:var(--muted);font-size:1.05rem}
-  .alt{background:var(--cream)}
-
-  /* ---------- ABOUT ---------- */
-  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-  .about-grid .txt p{color:var(--muted);margin-bottom:16px}
-  .about-grid h2{font-size:clamp(1.9rem,4vw,2.7rem);color:var(--blue);margin-bottom:8px}
-  .facts{display:flex;gap:14px;flex-wrap:wrap;margin:26px 0}
-  .fact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;flex:1;min-width:150px}
-  .fact b{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold)}
-  .fact span{font-size:.85rem;color:var(--muted)}
-  .name-box{margin-top:26px;border-left:3px solid var(--gold);padding:6px 0 6px 22px}
-  .name-box h4{font-family:'Playfair Display',serif;color:var(--blue);font-size:1.15rem;margin-bottom:6px}
-  .name-box p{font-size:.95rem;color:var(--muted);margin-bottom:12px}
-  .about-img{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5}
-  .about-img img{width:100%;height:100%;object-fit:cover}
-  .about-img figcaption{position:absolute;bottom:0;left:0;right:0;padding:30px 20px 16px;color:#fff;font-size:.85rem;background:linear-gradient(transparent,rgba(16,25,58,.85))}
-
-  /* ---------- TIMELINE ---------- */
-  .tl{max-width:880px;margin:0 auto;position:relative}
-  .tl::before{content:"";position:absolute;left:28px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),var(--gold-soft) 60%,transparent)}
-  .tl-item{position:relative;padding:0 0 44px 78px}
-  .tl-item:last-child{padding-bottom:0}
-  .tl-dot{position:absolute;left:16px;top:2px;width:26px;height:26px;border-radius:50%;background:var(--ivory);border:2px solid var(--gold);display:grid;place-items:center;color:var(--blue);font-size:.8rem}
-  .alt .tl-dot{background:var(--cream)}
-  .tl-item .yr{display:inline-block;font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--gold);font-weight:600;margin-bottom:4px}
-  .tl-item h3{color:var(--blue);font-size:1.3rem;margin-bottom:8px}
-  .tl-item p{color:var(--muted)}
-  .quote-card{
-    margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:14px;
-    padding:22px 26px;font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;
-    color:var(--blue);position:relative;box-shadow:var(--shadow)
-  }
-  .quote-card::before{content:"\201C";position:absolute;top:-6px;left:14px;font-size:3.4rem;color:var(--gold-soft);font-family:'Playfair Display',serif}
-  .quote-card cite{display:block;margin-top:10px;font-style:normal;font-family:'Be Vietnam Pro';font-size:.82rem;color:var(--muted)}
-  .hist-media{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:880px;margin:48px auto 0}
-  .hist-media figure{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:3/2;position:relative}
-  .hist-media img{width:100%;height:100%;object-fit:cover}
-  .hist-media figcaption{position:absolute;bottom:0;left:0;right:0;padding:24px 16px 12px;color:#fff;font-size:.8rem;background:linear-gradient(transparent,rgba(16,25,58,.88))}
-
-  /* ---------- HIGHLIGHTS ---------- */
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 10px 30px -20px rgba(27,42,91,.4);transition:.3s}
-  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-  .card .ph{aspect-ratio:4/3;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--blue),var(--blue-soft))}
-  .card .ph img{width:100%;height:100%;object-fit:cover;transition:.5s}
-  .card:hover .ph img{transform:scale(1.06)}
-  .card .num{position:absolute;top:12px;left:12px;z-index:2;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--blue);display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem}
-  .card .body{padding:22px 22px 26px}
-  .card h3{color:var(--blue);font-size:1.25rem;margin-bottom:10px}
-  .card p{color:var(--muted);font-size:.94rem}
-
-  /* ---------- FESTIVALS ---------- */
-  .fest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .fest{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:var(--r);padding:30px 26px;transition:.3s}
-  .fest:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-  .fest .tag{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
-  .fest h3{color:var(--blue);font-size:1.3rem;margin:10px 0}
-  .fest p{color:var(--muted);font-size:.95rem}
-  .fest .when{margin-top:14px;font-weight:600;color:var(--blue);font-size:.92rem}
-  .banner{margin-top:40px;background:linear-gradient(135deg,var(--blue),var(--blue-soft));color:#fff;border-radius:var(--r);padding:38px 40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;box-shadow:var(--shadow)}
-  .banner h3{font-size:1.5rem;color:#fff}
-  .banner p{color:rgba(255,255,255,.82);margin-top:6px}
-  .banner .badge{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--gold-soft);text-align:center;line-height:1}
-  .banner .badge small{display:block;font-family:'Be Vietnam Pro';font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:4px}
-
-  /* ---------- GUIDE / ACCORDION ---------- */
-  .guide-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:start}
-  .guide-img{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:3/4;position:relative}
-  .guide-img img{width:100%;height:100%;object-fit:cover}
-  .acc{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:14px;background:#fff}
-  .acc summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;gap:14px;font-weight:600;color:var(--blue);font-size:1.02rem}
-  .acc summary::-webkit-details-marker{display:none}
-  .acc summary .ai{width:36px;height:36px;border-radius:9px;background:var(--cream);display:grid;place-items:center;flex:none;color:var(--gold)}
-  .acc summary .ai svg{width:19px;height:19px}
-  .acc summary .chev{margin-left:auto;transition:.3s;color:var(--gold)}
-  .acc[open] summary .chev{transform:rotate(180deg)}
-  .acc .ac-body{padding:0 24px 22px 72px;color:var(--muted);font-size:.96rem}
-  .acc .ac-body ul{margin:8px 0 0 18px}
-  .acc .ac-body li{margin-bottom:6px}
-
-  /* ---------- FOOTER ---------- */
-  footer{background:var(--blue);color:rgba(255,255,255,.82);padding:0}
-  .map-wrap{height:380px;width:100%;filter:saturate(.9)}
-  .map-wrap iframe{width:100%;height:100%;border:0;display:block}
-  .foot-main{padding:70px 0 30px}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:46px}
-  .foot-grid h4{font-family:'Playfair Display',serif;color:#fff;font-size:1.15rem;margin-bottom:18px}
-  .foot-brand .brand .mark{border-color:var(--gold-soft)}
-  .foot-brand b{color:#fff!important}
-  .foot-brand span{color:rgba(255,255,255,.6)!important}
-  .foot-brand p{margin-top:18px;font-size:.92rem;color:rgba(255,255,255,.66);max-width:320px}
-  .foot-grid ul{list-style:none}
-  .foot-grid ul li{margin-bottom:11px;font-size:.93rem}
-  .foot-grid ul li a{color:rgba(255,255,255,.78);transition:.2s}
-  .foot-grid ul li a:hover{color:var(--gold-soft)}
-  .foot-grid .ic{color:var(--gold);margin-right:9px;display:inline-flex}
-  .foot-grid .ic svg{width:15px;height:15px;vertical-align:-2px}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:50px;padding:24px 0;font-size:.82rem;color:rgba(255,255,255,.55);text-align:center;line-height:1.9}
-  .foot-bottom b{color:rgba(255,255,255,.8);font-weight:600}
-
-  /* ---------- REVEAL ---------- */
-  .reveal{opacity:0;transform:translateY(28px);transition:.8s cubic-bezier(.2,.7,.2,1)}
-  .reveal.in{opacity:1;transform:none}
-
-  /* ---------- AUDIO PLAYER ---------- */
-  .player{
-    position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;
-    background:rgba(27,42,91,.96);backdrop-filter:blur(8px);
-    border:1px solid rgba(196,160,53,.55);border-radius:50px;
-    box-shadow:0 16px 38px -14px rgba(0,0,0,.55);padding:6px;
-    max-width:62px;overflow:hidden;transition:max-width .45s cubic-bezier(.2,.7,.2,1)
-  }
-  .player.expanded,.player:hover{max-width:250px}
-  .player .pp{
-    width:50px;height:50px;border-radius:50%;flex:none;border:0;cursor:pointer;
-    background:var(--gold);color:var(--blue);display:grid;place-items:center;transition:.2s
-  }
-  .player .pp:hover{background:var(--gold-soft);transform:scale(1.05)}
-  .player .pp svg{width:20px;height:20px}
-  .player .i-pause{display:none}
-  .player.playing .i-play{display:none}
-  .player.playing .i-pause{display:block}
-  .player .meta{padding:0 18px 0 13px;color:#fff;white-space:nowrap}
-  .player .meta .t{font-size:.84rem;font-weight:600;color:var(--gold-soft);display:flex;align-items:center}
-  .player .meta .s{font-size:.68rem;color:rgba(255,255,255,.6);letter-spacing:.04em;margin-top:1px}
-  .eq{display:inline-flex;gap:2px;height:11px;align-items:flex-end;margin-right:8px}
-  .eq i{width:2px;background:var(--gold-soft);height:3px;border-radius:2px}
-  .player.playing .eq i{animation:eq .9s ease-in-out infinite}
-  .player.playing .eq i:nth-child(2){animation-delay:.25s}
-  .player.playing .eq i:nth-child(3){animation-delay:.45s}
-  .player.playing .eq i:nth-child(4){animation-delay:.12s}
-  @keyframes eq{0%,100%{height:3px}50%{height:11px}}
-  @media(max-width:640px){.player{right:14px;bottom:14px}}
-
-  /* ---------- RESPONSIVE ---------- */
-  @media(max-width:900px){
-    .about-grid,.guide-grid{grid-template-columns:1fr;gap:36px}
-    .cards,.fest-grid{grid-template-columns:1fr 1fr}
-    .foot-grid{grid-template-columns:1fr 1fr;gap:34px}
-    .hist-media{grid-template-columns:1fr}
-  }
-  @media(max-width:640px){
-    section{padding:70px 0}
-    nav ul{
-      position:fixed;inset:72px 0 auto 0;background:var(--ivory);flex-direction:column;
-      gap:0;padding:10px 0;box-shadow:var(--shadow);transform:translateY(-130%);transition:.35s;
-    }
-    nav ul.open{transform:none}
-    nav a{display:block;padding:14px 24px;color:var(--ink)!important;border-bottom:1px solid var(--line)}
-    .nav-cta,.nav-lang{margin:12px 24px;text-align:center}
-    .burger{display:flex}
-    .cards,.fest-grid,.foot-grid{grid-template-columns:1fr}
-    .banner{padding:28px 24px}
-    .about-img{aspect-ratio:4/4}
-  }
+:root{
+  --bg:#0A0A0A;--bg2:#0F0F0F;--bg3:#111111;
+  --card:rgba(255,255,255,.03);--card-h:rgba(124,58,237,.06);
+  --purple:#7C3AED;--purple-l:#A78BFA;
+  --blue:#2563EB;--blue-l:#60A5FA;
+  --mint:#10B981;--mint-l:#34D399;
+  --white:#F9FAFB;--g1:#E5E7EB;--g2:#9CA3AF;--g3:#6B7280;
+  --border:rgba(255,255,255,.07);--border-h:rgba(124,58,237,.35);
+  --grad:linear-gradient(135deg,var(--purple),var(--blue));
+  --grad-text:linear-gradient(135deg,#A78BFA 0%,#60A5FA 50%,#34D399 100%);
+  --glow-p:0 0 40px rgba(124,58,237,.35);
+  --glow-b:0 0 40px rgba(37,99,235,.35);
+  --r:14px;--sec:110px 0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--white);font-family:'Inter',system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.15;font-weight:700}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.wrap{width:min(1200px,92%);margin-inline:auto}
+.grad-text{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--purple-l);margin-bottom:18px}
+.sec-label::before{content:'';width:24px;height:1.5px;background:var(--purple-l)}
+.reveal{opacity:0;transform:translateY(32px);transition:.75s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+nav.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s}
+nav.nav.solid{background:rgba(10,10,10,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem}
+.logo-mark{width:36px;height:36px;border-radius:9px;background:var(--grad);display:grid;place-items:center}
+.logo-mark svg{width:18px;height:18px}
+.logo-name{color:var(--white)}
+.logo-name span{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;align-items:center;gap:6px;list-style:none}
+.nav-links a{font-size:.88rem;font-weight:500;color:var(--g2);padding:7px 14px;border-radius:8px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-links a.active{background:rgba(124,58,237,.15);color:var(--purple-l)}
+.nav-lang{border:1px solid var(--border);border-radius:50px;padding:5px 14px;font-size:.8rem;font-weight:600;color:var(--g2)!important;transition:.2s!important}
+.nav-lang:hover{border-color:var(--purple-l)!important;color:var(--purple-l)!important;background:rgba(124,58,237,.1)!important}
+.nav-cta{background:var(--grad);color:var(--white)!important;padding:9px 20px!important;border-radius:50px;font-weight:600;font-size:.88rem;box-shadow:0 0 20px rgba(124,58,237,.3);transition:.25s!important}
+.nav-cta:hover{opacity:.9;box-shadow:var(--glow-p);transform:translateY(-1px)}
+.burger{display:none;flex-direction:column;gap:5px;width:42px;height:42px;align-items:center;justify-content:center;border-radius:8px;border:1px solid var(--border)}
+.burger span{width:22px;height:1.5px;background:var(--g2);transition:.3s;transform-origin:center}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%}
+.hero-in{position:relative;z-index:2;text-align:center;padding:130px 0 90px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.3);border-radius:50px;padding:6px 16px 6px 8px;font-size:.8rem;color:var(--purple-l);margin-bottom:28px}
+.hero-badge-dot{width:8px;height:8px;background:var(--mint-l);border-radius:50%;animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{font-size:clamp(2.6rem,5.5vw,4.8rem);letter-spacing:-.02em;max-width:900px;margin-inline:auto;line-height:1.1}
+.hero p.lead{margin:24px auto 0;max-width:660px;font-size:clamp(.98rem,1.8vw,1.15rem);color:var(--g2);font-weight:300}
+.hero-ctas{margin-top:40px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:50px;font-weight:600;font-size:.95rem;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 0 30px rgba(124,58,237,.35)}
+.btn-primary:hover{box-shadow:0 0 45px rgba(124,58,237,.55);transform:translateY(-2px)}
+.btn-outline{border:1.5px solid rgba(255,255,255,.2);color:var(--white)}
+.btn-outline:hover{border-color:var(--purple-l);color:var(--purple-l);background:rgba(124,58,237,.08)}
+.scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--g3);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase}
+.scroll-hint::after{content:'';width:1px;height:36px;background:linear-gradient(var(--g3),transparent);animation:sh 2s infinite}
+@keyframes sh{0%,100%{opacity:.3}50%{opacity:1}}
+.about{padding:var(--sec);background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+.about h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:20px}
+.about-desc{color:var(--g2);font-size:1.02rem;margin-bottom:14px}
+.about-desc b{color:var(--white);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.stat{background:var(--bg2);padding:28px 20px;text-align:center}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:6px}
+.stat-label{font-size:.82rem;color:var(--g3);font-weight:500}
+.services{padding:var(--sec)}
+.services-head{text-align:center;max-width:700px;margin:0 auto 60px}
+.services-head h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:14px}
+.services-head p{color:var(--g2)}
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.svc-col-label{font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.svc-col-label.ai{color:var(--purple-l)}
+.svc-col-label.design{color:var(--mint-l)}
+.svc-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:.3s;position:relative;overflow:hidden;margin-bottom:16px}
+.svc-card::before{content:'';position:absolute;left:0;top:22%;bottom:22%;width:2px;border-radius:2px;transition:.3s}
+.svc-card.ai-card::before{background:linear-gradient(var(--purple),var(--blue-l))}
+.svc-card.design-card::before{background:linear-gradient(var(--mint),var(--blue-l))}
+.svc-card:hover{background:var(--card-h);border-color:var(--border-h);box-shadow:var(--glow-p);transform:translateY(-3px)}
+.svc-card.design-card:hover{border-color:rgba(16,185,129,.3);box-shadow:0 0 40px rgba(16,185,129,.18)}
+.svc-icon{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;margin-bottom:14px}
+.svc-icon.ai-ic{background:rgba(124,58,237,.15);color:var(--purple-l)}
+.svc-icon.design-ic{background:rgba(16,185,129,.12);color:var(--mint-l)}
+.svc-icon svg{width:20px;height:20px}
+.svc-card h3{font-size:1.05rem;margin-bottom:8px;color:var(--white)}
+.svc-card p{font-size:.9rem;color:var(--g2);line-height:1.6}
+.projects{padding:var(--sec);background:var(--bg2)}
+.projects-head{text-align:center;max-width:700px;margin:0 auto 60px}
+.projects-head h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:14px}
+.projects-head p{color:var(--g2)}
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.proj-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--border);transition:.35s;cursor:pointer}
+.proj-card:hover{border-color:var(--border-h);box-shadow:var(--glow-p);transform:translateY(-4px)}
+.proj-visual{aspect-ratio:16/9;position:relative;overflow:hidden}
+.pv1{background:linear-gradient(135deg,#1a0533 0%,#2d1b69 40%,#1e3a8a 100%)}
+.pv2{background:linear-gradient(135deg,#042f2e 0%,#064e3b 40%,#1e3a5f 100%)}
+.pv3{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 40%,#1a3656 100%)}
+.pv4{background:linear-gradient(135deg,#1c1917 0%,#292524 40%,#1e2d40 100%)}
+.proj-visual::before{content:'';position:absolute;top:0;left:0;right:0;height:28px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
+.proj-visual::after{content:'';position:absolute;top:8px;left:12px;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);box-shadow:14px 0 0 rgba(255,255,255,.2),28px 0 0 rgba(255,255,255,.2)}
+.proj-decoration{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.25}
+.proj-decoration svg{width:45%;height:45%}
+.proj-overlay{position:absolute;inset:0;background:rgba(7,2,20,.75);backdrop-filter:blur(3px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;opacity:0;transition:.3s}
+.proj-card:hover .proj-overlay{opacity:1}
+.btn-detail{background:var(--grad);color:#fff;padding:10px 24px;border-radius:50px;font-weight:600;font-size:.88rem;border:none;cursor:pointer;transition:.2s}
+.btn-detail:hover{box-shadow:var(--glow-p);transform:scale(1.04)}
+.proj-info{padding:18px 20px}
+.proj-info h3{font-size:1.05rem;margin-bottom:10px;color:var(--white)}
+.proj-tags{display:flex;flex-wrap:wrap;gap:7px}
+.proj-tags span{font-size:.74rem;font-weight:600;padding:4px 10px;border-radius:50px;background:rgba(255,255,255,.05);border:1px solid var(--border);color:var(--g2)}
+.process{padding:var(--sec)}
+.process-head{text-align:center;max-width:700px;margin:0 auto 70px}
+.process-head h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:14px}
+.process-head p{color:var(--g2)}
+.process-track{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.process-track::before{content:'';position:absolute;top:28px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(to right,var(--purple),var(--blue),var(--mint));opacity:.25}
+.process-step{text-align:center;padding:0 16px}
+.step-num{width:56px;height:56px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;position:relative;z-index:1;transition:.3s}
+.step-num.s1{background:rgba(124,58,237,.15);color:var(--purple-l);border:1.5px solid rgba(124,58,237,.4)}
+.step-num.s2{background:rgba(96,165,250,.1);color:var(--blue-l);border:1.5px solid rgba(96,165,250,.35)}
+.step-num.s3{background:rgba(52,211,153,.1);color:var(--mint-l);border:1.5px solid rgba(52,211,153,.35)}
+.step-num.s4{background:rgba(124,58,237,.1);color:var(--purple-l);border:1.5px solid rgba(124,58,237,.3)}
+.process-step:hover .step-num{box-shadow:var(--glow-p)}
+.step-tag{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g3);margin-bottom:10px}
+.process-step h3{font-size:1rem;margin-bottom:8px;color:var(--white)}
+.process-step p{font-size:.87rem;color:var(--g2);line-height:1.6}
+.contact{padding:var(--sec);background:var(--bg2);position:relative;overflow:hidden}
+.contact::before{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(124,58,237,.08) 0%,transparent 70%);pointer-events:none}
+.contact::after{content:'';position:absolute;bottom:-200px;left:-200px;width:400px;height:400px;background:radial-gradient(circle,rgba(37,99,235,.07) 0%,transparent 70%);pointer-events:none}
+.contact-head{text-align:center;max-width:700px;margin:0 auto 60px;position:relative;z-index:1}
+.contact-head h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:14px}
+.contact-head p{color:var(--g2)}
+.contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;position:relative;z-index:1}
+.form-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:36px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.84rem;font-weight:500;color:var(--g1);margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:9px;padding:12px 16px;color:var(--white);font-family:'Inter',sans-serif;font-size:.93rem;transition:.2s;outline:none}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--g3)}
+.form-group select option{background:#1a1a1a;color:var(--white)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--purple-l);box-shadow:0 0 0 3px rgba(124,58,237,.12)}
+.form-group textarea{height:110px;resize:none}
+.btn-submit{width:100%;background:var(--grad);color:#fff;padding:14px;border-radius:50px;font-size:.95rem;font-weight:700;letter-spacing:.03em;border:none;cursor:pointer;transition:.3s;box-shadow:0 0 25px rgba(124,58,237,.3)}
+.btn-submit:hover{box-shadow:0 0 45px rgba(124,58,237,.5);transform:translateY(-2px)}
+.form-success{display:none;text-align:center;padding:40px 20px}
+.form-success .check{width:56px;height:56px;border-radius:50%;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.4);color:var(--mint-l);margin:0 auto 18px;display:grid;place-items:center;font-size:1.5rem}
+.form-success h4{font-size:1.2rem;margin-bottom:8px;color:var(--white)}
+.form-success p{color:var(--g2);font-size:.93rem}
+.contact-info{padding-top:8px}
+.contact-info h3{font-size:1.35rem;margin-bottom:24px;color:var(--white)}
+.info-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.info-icon{width:40px;height:40px;border-radius:10px;background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.2);display:grid;place-items:center;flex:none;color:var(--purple-l)}
+.info-icon svg{width:18px;height:18px}
+.info-item .label{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--g3);margin-bottom:3px}
+.info-item .value{font-size:.93rem;color:var(--g1);font-weight:500}
+.social-row{margin-top:32px}
+.social-row .label{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--g3);margin-bottom:14px}
+.socials{display:flex;gap:10px}
+.soc-btn{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid var(--border);display:grid;place-items:center;color:var(--g2);transition:.2s}
+.soc-btn:hover{background:rgba(124,58,237,.12);border-color:rgba(124,58,237,.3);color:var(--purple-l)}
+.soc-btn svg{width:17px;height:17px}
+footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 0}
+.foot-in{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.foot-copy{font-size:.82rem;color:var(--g3)}
+.foot-copy b{color:var(--g2)}
+.foot-links{display:flex;gap:20px}
+.foot-links a{font-size:.82rem;color:var(--g3);transition:.2s}
+.foot-links a:hover{color:var(--purple-l)}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);z-index:200;display:none;align-items:center;justify-content:center;padding:24px}
+.modal-overlay.open{display:flex}
+.modal{background:#141414;border:1px solid var(--border);border-radius:20px;width:100%;max-width:640px;overflow:hidden;position:relative}
+.modal-visual{height:220px;position:relative}
+.modal-close{position:absolute;top:14px;right:14px;z-index:10;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid var(--border);color:var(--g2);display:grid;place-items:center;cursor:pointer;transition:.2s;font-size:1.1rem}
+.modal-close:hover{background:rgba(124,58,237,.2);border-color:var(--border-h);color:var(--white)}
+.modal-body{padding:28px 32px 32px}
+.modal-body h3{font-size:1.5rem;margin-bottom:12px}
+.modal-body p{color:var(--g2);font-size:.95rem;margin-bottom:20px;line-height:1.7}
+.modal-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.modal-tags span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:50px;border:1px solid var(--border-h);color:var(--purple-l);background:rgba(124,58,237,.08)}
+.modal-tech h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--g3);margin-bottom:10px}
+.modal-tech-items{display:flex;gap:8px;flex-wrap:wrap}
+.modal-tech-items span{font-size:.8rem;padding:4px 11px;border-radius:7px;background:rgba(255,255,255,.05);color:var(--g1);border:1px solid var(--border)}
+@media(max-width:960px){
+  :root{--sec:80px 0}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .services-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:1fr}
+  .process-track{grid-template-columns:1fr 1fr;gap:36px}
+  .process-track::before{display:none}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .foot-in{flex-direction:column;text-align:center}
+  .foot-links{justify-content:center}
+}
+@media(max-width:640px){
+  :root{--sec:70px 0}
+  .nav-links{position:fixed;inset:70px 0 auto 0;flex-direction:column;align-items:stretch;background:rgba(10,10,10,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:12px 16px 16px;gap:4px;transform:translateY(-110%);transition:.35s}
+  .nav-links.open{transform:none}
+  .nav-links a{padding:13px 16px;border-radius:10px}
+  .nav-links a.active{background:rgba(124,58,237,.12)}
+  .burger{display:flex}
+  .stats{grid-template-columns:1fr}
+  .process-track{grid-template-columns:1fr}
+  .modal-body{padding:22px 22px 28px}
+  .hero h1{font-size:2.1rem}
+}
 </style>
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
-<header class="nav" id="nav">
+<!-- NAV -->
+<nav class="nav" id="nav">
   <div class="wrap nav-in">
-    <a href="#top" class="brand">
-      <span class="mark">✝</span>
-      <span><b>La Vang</b><span>Marian Pilgrimage Center</span></span>
+    <a href="#hero" class="logo">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="9" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="15"/><line x1="9" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="15" y2="12"/></svg></span>
+      <span class="logo-name">TTHH<span>LAVANG</span></span>
     </a>
-    <nav>
-      <ul id="menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#history">History</a></li>
-        <li><a href="#highlights">Sacred Sites</a></li>
-        <li><a href="#festivals">Celebrations</a></li>
-        <li><a href="#guide">Pilgrim Guide</a></li>
-        <li><a href="index.html" class="nav-lang" hreflang="vi">VI</a></li>
-        <li><a href="#footer" class="nav-cta">Contact</a></li>
-      </ul>
-    </nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="index.html" class="nav-lang" hreflang="vi">VI</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
     <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
-</header>
+</nav>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="top">
-  <div class="hero-bg">
-    <img src="images/quang-truong-toan-canh.jpg" alt="Panorama of the square at the La Vang Holy Land, Quảng Trị" />
-  </div>
-  <div class="hero-in">
-    <span class="eyebrow" style="color:var(--gold-soft)">National Marian Shrine · Quảng Trị, Vietnam</span>
-    <h1>La Vang Holy Land<br /><em>A Sanctuary of Peace</em></h1>
-    <p class="lead">The National Marian Shrine of the Catholic Church in Vietnam — where faith, history and distinctive architecture come together on the sacred soil of Quảng Trị.</p>
-    <div class="ctas">
-      <a href="#about" class="btn btn-gold">Discover La Vang</a>
-      <a href="#guide" class="btn btn-ghost">Pilgrim Guide</a>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="wrap hero-in reveal">
+    <div class="hero-badge"><span class="hero-badge-dot"></span>Technology &amp; Transformation Hub · Vietnam</div>
+    <h1>Building the Future with<br><span class="grad-text">Breakthrough Design</span><br>&amp; AI Technology</h1>
+    <p class="lead">TTHH LAVANG partners with businesses to digitize operations with AI and elevate brands with world-class UI/UX experiences.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">Get Free Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="#projects" class="btn btn-outline">View Projects</a>
     </div>
   </div>
-  <div class="scroll-cue">Scroll</div>
+  <div class="scroll-hint">Scroll</div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section id="about">
+<!-- ABOUT -->
+<section class="about" id="about">
   <div class="wrap about-grid">
-    <div class="txt reveal">
-      <span class="eyebrow">Overview &amp; Location</span>
-      <h2>Our Lady's Land in the Heart of Quảng Trị</h2>
-      <p>Set in <b>Hải Lăng Commune, Quảng Trị Province</b>, the La Vang Holy Land is the foremost spiritual destination for Vietnamese Catholics. It also warmly welcomes visitors from everywhere — regardless of faith — who come seeking peace, stillness and healing.</p>
-      <div class="facts">
-        <div class="fact"><b>~60 km</b><span>from Huế City</span></div>
-        <div class="fact"><b>~20 km</b><span>from Đông Hà City</span></div>
-        <div class="fact"><b>1961</b><span>National Marian Shrine</span></div>
-      </div>
-      <div class="name-box">
-        <h4>About the name “La Vang”</h4>
-        <p><b>First account —</b> From the words “la vang” (to cry out): long ago this was a remote, perilous forest full of wild beasts, where travelers had to call out loudly to warn one another.</p>
-        <p><b>Second account —</b> From “lá vằng” — a medicinal forest leaf which, according to oral tradition, Our Lady showed the faithful to gather and brew as a remedy — later softened in speech to “La Vang”.</p>
-      </div>
+    <div class="reveal">
+      <span class="sec-label">About Us</span>
+      <h2>Who <span class="grad-text">we are</span></h2>
+      <p class="about-desc">TTHH LAVANG is not just another design agency. We are a <b>Technology & Transformation Hub</b> — where AI Engineers and UI/UX Experts come together.</p>
+      <p class="about-desc">Our mission is to transform complex ideas into <b>lean digital solutions</b> — automating operations and driving exponential growth to help businesses lead in the digital era.</p>
     </div>
-    <figure class="about-img reveal">
-      <img src="images/la-vang-cay.jpg" alt="Lá vằng – the medicinal plant linked to the name La Vang" />
-      <figcaption>Lá vằng — the forest leaf tied to the tradition of healing at La Vang</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- ============ HISTORY ============ -->
-<section id="history" class="alt">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">The Story of La Vang</span>
-      <h2>The Origin of a Living Faith</h2>
-      <p>More than two centuries ago, amid persecution, the faithful fled to the forest of La Vang — and there a story of faith was born.</p>
-    </div>
-
-    <div class="tl">
-      <div class="tl-item reveal">
-        <span class="tl-dot">✦</span>
-        <span class="yr">1798</span>
-        <h3>A Refuge Deep in the Forest</h3>
-        <p>Under King Cảnh Thịnh of the Tây Sơn dynasty, the Catholic faith was severely persecuted. A group of the faithful fled deep into the La Vang forest to take refuge. Enduring hunger, sickness and the danger of wild beasts, they gathered beneath an ancient banyan tree to pray fervently.</p>
+    <div class="reveal">
+      <div class="stats">
+        <div class="stat"><div class="stat-num" data-target="99">0</div><div class="stat-label">% Process automation rate</div></div>
+        <div class="stat"><div class="stat-num" data-suffix="/7" data-target="24">0</div><div class="stat-label">AI operating continuously</div></div>
+        <div class="stat"><div class="stat-num" data-suffix="+" data-target="100">0</div><div class="stat-label">Conversion-optimized interfaces</div></div>
       </div>
-      <div class="tl-item reveal">
-        <span class="tl-dot">✦</span>
-        <span class="yr">The Apparition</span>
-        <h3>The Consolation of Our Mother</h3>
-        <p>According to tradition, the Blessed Virgin Mary appeared in the traditional Vietnamese áo dài, holding the Child Jesus, with two angels bearing lamps at her sides. She consoled them, promised the grace of peace, and showed them a forest leaf to brew as a remedy for their illnesses.</p>
-        <div class="quote-card">
-          From now on, all who come to this place to implore my help will have their prayers heard and their petitions granted.
-          <cite>— From the oral tradition of the apparition of Our Lady of La Vang</cite>
-        </div>
-      </div>
-      <div class="tl-item reveal">
-        <span class="tl-dot">✦</span>
-        <span class="yr">1961</span>
-        <h3>National Marian Shrine</h3>
-        <p>The Catholic Bishops' Conference of Vietnam proclaimed La Vang the National Marian Shrine. That same year, Pope John XXIII raised the La Vang church to the rank of <b>minor basilica</b>, marking the special place of this Holy Land in the heart of the Church.</p>
-      </div>
-    </div>
-
-    <div class="hist-media">
-      <figure class="reveal">
-        <img src="images/duc-me-la-vang.jpg" alt="Statue of Our Lady of La Vang in the Vietnamese áo dài, holding the Child Jesus" />
-        <figcaption>Our Lady of La Vang in the Vietnamese áo dài, holding the Child Jesus</figcaption>
-      </figure>
-      <figure class="reveal">
-        <img src="images/nha-tho-cu-1967.jpg" alt="The old La Vang church (built 1928), photographed in 1967 before its destruction in 1972" />
-        <figcaption>The old La Vang church — photographed in 1967, before its destruction in 1972</figcaption>
-      </figure>
     </div>
   </div>
 </section>
 
-<!-- ============ HIGHLIGHTS ============ -->
-<section id="highlights">
+<!-- SERVICES -->
+<section class="services" id="services">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Sacred Sites &amp; Landmarks</span>
-      <h2>Marks of the Sacred</h2>
-      <p>Each landmark at La Vang stands as a witness to faith, history and the spirit of Vietnamese culture.</p>
+    <div class="services-head reveal">
+      <span class="sec-label">Service Ecosystem</span>
+      <h2>Our <span class="grad-text">Expertise</span></h2>
+      <p>Two core capability pillars — AI and UI/UX — seamlessly integrated into a comprehensive digital solution for your business.</p>
     </div>
-
-    <div class="cards">
-      <article class="card reveal">
-        <div class="ph"><span class="num">1</span><img src="images/linh-dai-ba-cay-da.jpg" alt="The Apparition Shrine of Our Lady of La Vang with three sculpted banyan trees" /></div>
-        <div class="body">
-          <h3>The Apparition Shrine</h3>
-          <p>The site that preserves the memory of Our Lady's apparition. Its design evokes three great banyan trees sheltering the statue of Our Lady of La Vang, robed in the áo dài, crowned, and holding the Child Jesus.</p>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="ph"><span class="num">2</span><img src="images/thap-co-la-vang.jpg" alt="The Ancient Tower of La Vang – remains of the old basilica" /></div>
-        <div class="body">
-          <h3>The Ancient Tower</h3>
-          <p>The surviving remnant of the old basilica (completed in 1928), heavily destroyed during the events of the summer of 1972. Weathered and moss-clad, the tower stands as a witness to history and the trials of war.</p>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="ph"><span class="num">3</span><img src="images/vuong-cung-thanh-duong-moi.jpg" alt="The new Basilica of Our Lady of La Vang with blue tiled roofs and the ancient tower in front" /></div>
-        <div class="body">
-          <h3>The New Basilica</h3>
-          <p>A grand structure nearing completion, deeply Vietnamese in spirit with sweeping tiled roofs in the form of traditional communal houses. With a capacity of about 5,000, its foundation stone was laid in 2012.</p>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="ph"><span class="num">4</span><img src="images/quang-truong-toan-canh.jpg" alt="Panorama of the Rosary Square at La Vang" /></div>
-        <div class="body">
-          <h3>Rosary Square</h3>
-          <p>A vast esplanade with statues depicting the 15 Mysteries of the Rosary (Joyful, Sorrowful, Glorious) — the setting for solemn Masses and the great Pilgrimage Congresses.</p>
-        </div>
-      </article>
-
-      <article class="card reveal">
-        <div class="ph"><span class="num">5</span><img src="images/thanh-gia-la-vang.jpg" alt="The Way of the Cross at the La Vang Holy Land" /></div>
-        <div class="body">
-          <h3>The Way of the Cross</h3>
-          <p>A path for meditating on the Passion of Christ station by station, inviting pilgrims to walk in prayer and contemplation amid the quiet of the Holy Land.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FESTIVALS ============ -->
-<section id="festivals" class="alt">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Major Celebrations</span>
-      <h2>The Pilgrim Season at Our Mother's Side</h2>
-      <p>All year round, La Vang opens wide its doors to pilgrims from everywhere — from the daily Mass to the most solemn Congresses.</p>
-    </div>
-
-    <div class="fest-grid">
-      <article class="fest reveal">
-        <span class="tag">Most Solemn</span>
-        <h3>La Vang Pilgrimage Congress</h3>
-        <p>Held once every three years (usually in mid-August, around the Solemnity of the Assumption), gathering hundreds of thousands of the faithful from within Vietnam and abroad.</p>
-        <div class="when">Every 3 years · August</div>
-      </article>
-      <article class="fest reveal">
-        <span class="tag">Annual</span>
-        <h3>Annual Pilgrimage Feast</h3>
-        <p>Celebrated each year on 15 August — the Solemnity of the Assumption of the Blessed Virgin Mary — in the years without a Congress.</p>
-        <div class="when">15 August, yearly</div>
-      </article>
-      <article class="fest reveal">
-        <span class="tag">Daily</span>
-        <h3>Daily Holy Mass</h3>
-        <p>Holy Mass is celebrated every day. The peaceful setting is ideal for those seeking a quiet place for personal prayer and reflection.</p>
-        <div class="when">Celebrated daily</div>
-      </article>
-    </div>
-
-    <div class="banner reveal">
-      <div>
-        <h3>The 32nd La Vang Congress — 2026</h3>
-        <p>Theme: <em>“Mary, Herald of the Good News”</em> · Joyfully awaiting pilgrims from every land.</p>
-      </div>
-      <div class="badge">13–15 Aug<small>August 2026</small></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ GUIDE ============ -->
-<section id="guide">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Pilgrim Guide</span>
-      <h2>Preparing for Your Journey</h2>
-    </div>
-
-    <div class="guide-grid">
-      <figure class="guide-img reveal">
-        <img src="images/duc-me-la-vang.jpg" alt="A pilgrim praying before the statue of Our Lady of La Vang" />
-      </figure>
-
+    <div class="services-grid">
       <div class="reveal">
-        <details class="acc" open>
-          <summary><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v3M16 3v3"/></svg></span> Best Time to Visit<span class="chev">⌄</span></summary>
-          <div class="ac-body">
-            You may visit at any time of year. For a more peaceful atmosphere, weekdays or springtime are ideal.
-            <ul><li>It is best to avoid Central Vietnam's storm season (roughly September to November) if you are not used to the harsh weather.</li></ul>
-          </div>
-        </details>
-
-        <details class="acc">
-          <summary><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.5-5.2 6.5-10.5a6.5 6.5 0 1 0-13 0C5.5 15.8 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.5"/></svg></span> Getting There<span class="chev">⌄</span></summary>
-          <div class="ac-body">
-            <ul>
-              <li><b>From Huế:</b> follow National Highway 1 north for about 60 km.</li>
-              <li><b>From Đồng Hới (former Quảng Bình):</b> follow National Highway 1 south for about 100 km.</li>
-              <li>You can travel by private car, coach or train (alight at Đông Hà or Huế railway station, then continue by bus or taxi).</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="acc">
-          <summary><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4l3 2 3-2 5 3-2.6 3.2L18 9.6V20H6V9.6L4.6 10.2 2 7z"/></svg></span> Dress Code<span class="chev">⌄</span></summary>
-          <div class="ac-body">
-            As a sacred place, visitors are kindly asked to dress modestly and respectfully (sleeved tops, trousers or skirts below the knee) to honor the holiness of the site.
-          </div>
-        </details>
-
-        <details class="acc">
-          <summary><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M8 8h8"/></svg></span> Honoring the Sacred Space<span class="chev">⌄</span></summary>
-          <div class="ac-body">
-            <ul>
-              <li>Maintain a reverent attitude and speak softly near the Apparition Shrine and the basilica.</li>
-              <li>Keep the grounds clean and do not litter within the Holy Land.</li>
-              <li>Follow the directions of the management, especially during crowded celebrations.</li>
-            </ul>
-          </div>
-        </details>
+        <div class="svc-col-label ai">AI Technology Solutions</div>
+        <div class="svc-card ai-card">
+          <div class="svc-icon ai-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="12" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="10" r="1" fill="currentColor"/></svg></div>
+          <h3>AI Chatbot &amp; Assistant</h3>
+          <p>Deploy intelligent virtual assistants that automatically serve customers 24/7 — understanding context and handling multi-threaded conversations.</p>
+        </div>
+        <div class="svc-card ai-card">
+          <div class="svc-icon ai-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="8" height="8" rx="1.5"/><rect x="14" y="2" width="8" height="8" rx="1.5"/><rect x="2" y="14" width="8" height="8" rx="1.5"/><path d="M14 18h8M18 14v8"/></svg></div>
+          <h3>Automation (RPA)</h3>
+          <p>Automate repetitive tasks, process big data and optimize internal operational workflows — eliminating manual bottlenecks at scale.</p>
+        </div>
+        <div class="svc-card ai-card">
+          <div class="svc-icon ai-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="6" y1="9" x2="6" y2="3"/><line x1="18" y1="9" x2="18" y2="3"/></svg></div>
+          <h3>AI Integration</h3>
+          <p>Integrate state-of-the-art AI models into your existing website or app infrastructure — seamlessly and without disruption.</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="svc-col-label design">Creative Design &amp; UI/UX</div>
+        <div class="svc-card design-card">
+          <div class="svc-icon design-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 12 15 2 8.5"/><polyline points="2 15 12 21.5 22 15"/><polyline points="2 11.5 12 18 22 11.5"/></svg></div>
+          <h3>Product Design (Web/App)</h3>
+          <p>Design refined, fluid application and website interfaces across all devices — from wireframe to pixel-perfect handoff.</p>
+        </div>
+        <div class="svc-card design-card">
+          <div class="svc-icon design-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+          <h3>Design System</h3>
+          <p>Build a synchronized, scalable design language for enterprises — component library, design tokens, and comprehensive guidelines.</p>
+        </div>
+        <div class="svc-card design-card">
+          <div class="svc-icon design-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 9l10 13L22 9z"/><line x1="2" y1="9" x2="22" y2="9"/></svg></div>
+          <h3>Branding &amp; Digital Identity</h3>
+          <p>Shape and develop a complete digital brand identity — logo, brand voice, visual identity system and style guide.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
-<footer id="footer">
-  <div class="map-wrap">
-    <iframe
-      src="https://www.google.com/maps?q=Th%C3%A1nh%20%C4%91%E1%BB%8Ba%20%C4%90%E1%BB%A9c%20M%E1%BA%B9%20La%20Vang%20Qu%E1%BA%A3ng%20Tr%E1%BB%8B&output=embed"
-      loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of the La Vang Holy Land"></iframe>
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="projects-head reveal">
+      <span class="sec-label">Featured Projects</span>
+      <h2>What we've<br><span class="grad-text">built</span></h2>
+      <p>Real-world digital solutions — from AI automation platforms to complex design systems — that have delivered measurable value.</p>
+    </div>
+    <div class="projects-grid">
+      <article class="proj-card reveal" onclick="openModal('smartflow')">
+        <div class="proj-visual pv1"><div class="proj-decoration"><svg viewBox="0 0 200 120" fill="none"><rect x="20" y="15" width="160" height="90" rx="4" stroke="rgba(167,139,250,.4)" stroke-width="1"/><rect x="30" y="25" width="60" height="8" rx="2" fill="rgba(167,139,250,.25)"/><rect x="30" y="40" width="140" height="1" stroke="rgba(255,255,255,.07)"/><rect x="30" y="50" width="85" height="6" rx="1.5" fill="rgba(96,165,250,.2)"/><rect x="30" y="62" width="65" height="6" rx="1.5" fill="rgba(167,139,250,.15)"/><rect x="30" y="74" width="100" height="6" rx="1.5" fill="rgba(96,165,250,.15)"/><rect x="140" y="48" width="30" height="32" rx="3" fill="rgba(167,139,250,.12)" stroke="rgba(167,139,250,.2)" stroke-width="1"/></svg></div><div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div></div>
+        <div class="proj-info"><h3>SmartFlow AI</h3><div class="proj-tags"><span>#AI_Automation</span><span>#SaaS_Platform</span><span>#Python</span></div></div>
+      </article>
+      <article class="proj-card reveal" onclick="openModal('nexaui')">
+        <div class="proj-visual pv2"><div class="proj-decoration"><svg viewBox="0 0 200 120" fill="none"><rect x="20" y="15" width="70" height="90" rx="3" stroke="rgba(52,211,153,.35)" stroke-width="1"/><rect x="30" y="25" width="50" height="50" rx="2" fill="rgba(52,211,153,.1)"/><rect x="30" y="82" width="30" height="6" rx="1.5" fill="rgba(52,211,153,.25)"/><rect x="100" y="15" width="80" height="42" rx="3" stroke="rgba(96,165,250,.35)" stroke-width="1" fill="rgba(96,165,250,.05)"/><rect x="110" y="24" width="40" height="5" rx="1.5" fill="rgba(96,165,250,.3)"/><rect x="110" y="34" width="55" height="4" rx="1.5" fill="rgba(96,165,250,.15)"/><rect x="110" y="43" width="45" height="4" rx="1.5" fill="rgba(96,165,250,.1)"/><rect x="100" y="63" width="80" height="42" rx="3" stroke="rgba(52,211,153,.25)" stroke-width="1" fill="rgba(52,211,153,.04)"/></svg></div><div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div></div>
+        <div class="proj-info"><h3>NexaUI Design System</h3><div class="proj-tags"><span>#Design_System</span><span>#React</span><span>#Figma</span></div></div>
+      </article>
+      <article class="proj-card reveal" onclick="openModal('botcore')">
+        <div class="proj-visual pv3"><div class="proj-decoration"><svg viewBox="0 0 200 120" fill="none"><circle cx="100" cy="60" r="28" stroke="rgba(167,139,250,.3)" stroke-width="1.5"/><circle cx="100" cy="60" r="16" stroke="rgba(96,165,250,.25)" stroke-width="1"/><circle cx="100" cy="60" r="5" fill="rgba(167,139,250,.5)"/><line x1="100" y1="32" x2="100" y2="20" stroke="rgba(167,139,250,.3)" stroke-width="1"/><line x1="128" y1="60" x2="140" y2="60" stroke="rgba(167,139,250,.3)" stroke-width="1"/><line x1="72" y1="60" x2="60" y2="60" stroke="rgba(167,139,250,.3)" stroke-width="1"/><circle cx="100" cy="18" r="4" fill="rgba(167,139,250,.4)"/><circle cx="142" cy="60" r="4" fill="rgba(96,165,250,.4)"/><circle cx="58" cy="60" r="4" fill="rgba(52,211,153,.4)"/></svg></div><div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div></div>
+        <div class="proj-info"><h3>BotCore Assistant</h3><div class="proj-tags"><span>#AI_Chatbot</span><span>#NLP</span><span>#LangChain</span></div></div>
+      </article>
+      <article class="proj-card reveal" onclick="openModal('metrics')">
+        <div class="proj-visual pv4"><div class="proj-decoration"><svg viewBox="0 0 200 120" fill="none"><rect x="20" y="15" width="160" height="90" rx="4" stroke="rgba(96,165,250,.3)" stroke-width="1"/><line x1="20" y1="35" x2="180" y2="35" stroke="rgba(255,255,255,.06)" stroke-width="1"/><rect x="30" y="23" width="30" height="6" rx="1.5" fill="rgba(96,165,250,.3)"/><polyline points="30,90 55,70 80,78 110,52 140,60 165,38" stroke="rgba(96,165,250,.5)" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"/><polyline points="30,90 55,80 80,85 110,68 140,72 165,58" stroke="rgba(52,211,153,.35)" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/><rect x="30" y="45" width="18" height="40" rx="1.5" fill="rgba(96,165,250,.12)"/><rect x="55" y="55" width="18" height="30" rx="1.5" fill="rgba(96,165,250,.1)"/><rect x="80" y="60" width="18" height="25" rx="1.5" fill="rgba(52,211,153,.1)"/></svg></div><div class="proj-overlay"><button class="btn-detail">View Details ↗</button></div></div>
+        <div class="proj-info"><h3>MetricsPro Dashboard</h3><div class="proj-tags"><span>#Data_Analytics</span><span>#Dashboard</span><span>#Next.js</span></div></div>
+      </article>
+    </div>
   </div>
-  <div class="foot-main">
-    <div class="wrap foot-grid">
-      <div class="foot-brand">
-        <a href="#top" class="brand"><span class="mark">✝</span><span><b>La Vang</b><span>Marian Pilgrimage Center</span></span></a>
-        <p>The National Marian Shrine of the Catholic Church in Vietnam — a place of peace for every soul that returns.</p>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="process-head reveal">
+      <span class="sec-label">Our Process</span>
+      <h2>4 steps to the<br><span class="grad-text">optimal solution</span></h2>
+      <p>A process designed to minimize risk and maximize impact — from discovery to deployment.</p>
+    </div>
+    <div class="process-track reveal">
+      <div class="process-step"><div class="step-num s1">01</div><div class="step-tag">Briefing</div><h3>Discovery &amp; Definition</h3><p>Receive requirements, analyse the operational or identity challenge the business faces.</p></div>
+      <div class="process-step"><div class="step-num s2">02</div><div class="step-tag">UI/UX Prototype</div><h3>Design &amp; Prototype</h3><p>Create wireframes and complete visual interface designs before a single line of code is written.</p></div>
+      <div class="process-step"><div class="step-num s3">03</div><div class="step-tag">AI &amp; Development</div><h3>Build &amp; Integrate</h3><p>Our engineering team develops the solution and trains, integrates AI modules into the system.</p></div>
+      <div class="process-step"><div class="step-num s4">04</div><div class="step-tag">Deployment</div><h3>Launch &amp; Support</h3><p>Deploy the system, optimize for SEO and provide lifetime technical support after handover.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="sec-label">Contact</span>
+      <h2>Ready to upgrade<br><span class="grad-text">your business?</span></h2>
+      <p>Fill in your details below — a TTHH LAVANG expert will reach out with the most suitable solution within <b style="color:var(--white)">2 business hours</b>.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="form-wrap reveal">
+        <form id="contactForm">
+          <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name" required /></div>
+          <div class="form-group"><label>Phone / Email</label><input type="text" placeholder="+84 xxx xxx xxx or email@company.com" required /></div>
+          <div class="form-group"><label>Service of Interest</label><select><option value="">-- Select a service --</option><option>UI/UX Design</option><option>AI Solutions</option><option>Both</option></select></div>
+          <div class="form-group"><label>Brief Message</label><textarea placeholder="Briefly describe your challenge or requirement..."></textarea></div>
+          <button type="submit" class="btn-submit">SEND CONSULTATION REQUEST</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="check">✓</div>
+          <h4>Message sent!</h4>
+          <p>Thank you for reaching out. A TTHH LAVANG expert will respond within 2 business hours.</p>
+        </div>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.5-5.2 6.5-10.5a6.5 6.5 0 1 0-13 0C5.5 15.8 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.5"/></svg></span> Hải Lăng Commune, Quảng Trị Province</li>
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M8 8h8"/></svg></span> Management of the Pilgrimage Center</li>
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M4 7l8 5.5L20 7"/></svg></span> Mass schedule &amp; pilgrim information</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Useful Links</h4>
-        <ul>
-          <li><a href="#festivals">Mass schedule &amp; Congress</a></li>
-          <li><a href="#guide">Visitor regulations</a></li>
-          <li><a href="#guide">Where to stay in Quảng Trị</a></li>
-        </ul>
+      <div class="contact-info reveal">
+        <h3>Contact information</h3>
+        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M4 7l8 5.5L20 7"/></svg></div><div><div class="label">Email</div><div class="value">hello@tthhlavang.com</div></div></div>
+        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.07 3.38 2 2 0 0 1 3.05 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 17z"/></svg></div><div><div class="label">Hotline</div><div class="value">+84 xxx xxx xxx</div></div></div>
+        <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21s6.5-5.2 6.5-10.5a6.5 6.5 0 1 0-13 0C5.5 15.8 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.5"/></svg></div><div><div class="label">Office</div><div class="value">57 Street 60, Cat Lai Ward<br>Ho Chi Minh City, Vietnam</div></div></div>
+        <div class="social-row"><div class="label">Follow us</div><div class="socials"><a href="#" class="soc-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" class="soc-btn" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a><a href="#" class="soc-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div></div>
       </div>
     </div>
-    <div class="wrap foot-bottom">
-      © 2026 Our Lady of La Vang Pilgrimage Center. All rights reserved.<br />
-      Operated by <b>ONETWENTYSIX VERSE DESIGN COMPANY LIMITED</b> · 57 Street 60, Cát Lái Ward, Ho Chi Minh City, Vietnam · Tax code: 0318489706
-    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-in">
+    <div class="foot-copy">© 2026 TTHH LAVANG. All rights reserved.<br><b>ONETWENTYSIX VERSE DESIGN COMPANY LIMITED</b> · Tax code: 0318489706</div>
+    <div class="foot-links"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a><a href="index.html" hreflang="vi">Tiếng Việt</a></div>
   </div>
 </footer>
 
-<!-- ============ BACKGROUND MUSIC ============ -->
-<div class="player" id="player" title="Background hymn: Bình An Của Mẹ">
-  <button class="pp" id="ppBtn" aria-label="Play or pause background music">
-    <svg class="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-    <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
-  </button>
-  <div class="meta">
-    <div class="t"><span class="eq"><i></i><i></i><i></i><i></i></span>Bình An Của Mẹ</div>
-    <div class="s">Background hymn</div>
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-visual" id="modalVisual"><button class="modal-close" onclick="closeModal()">✕</button></div>
+    <div class="modal-body"><h3 id="modalTitle"></h3><p id="modalDesc"></p><div class="modal-tags" id="modalTags"></div><div class="modal-tech"><h4>Tech stack</h4><div class="modal-tech-items" id="modalTech"></div></div></div>
   </div>
 </div>
-<audio id="bgAudio" src="audio/binh-an-cua-me.mp3" loop preload="auto"></audio>
 
 <script>
-  // sticky nav background
-  const nav=document.getElementById('nav');
-  const onScroll=()=>nav.classList.toggle('solid',window.scrollY>60);
-  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
-
-  // mobile menu
-  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
-  burger.addEventListener('click',()=>menu.classList.toggle('open'));
-  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
-
-  // scroll reveal
-  const io=new IntersectionObserver((es)=>{
-    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-  // background music player
-  (function(){
-    const audio=document.getElementById('bgAudio');
-    const player=document.getElementById('player');
-    const btn=document.getElementById('ppBtn');
-    audio.volume=0.45;
-    let collapseTimer;
-    function onPlay(){
-      player.classList.add('playing','expanded');
-      clearTimeout(collapseTimer);
-      collapseTimer=setTimeout(()=>player.classList.remove('expanded'),4000);
-    }
-    function play(){audio.play().then(onPlay).catch(()=>{});}
-    function pause(){audio.pause();player.classList.remove('playing');}
-    btn.addEventListener('click',()=>{audio.paused?play():pause();});
-    audio.addEventListener('pause',()=>player.classList.remove('playing'));
-    audio.addEventListener('play',onPlay);
-    // try autoplay; if blocked by the browser, start on first user interaction
-    audio.play().then(onPlay).catch(()=>{
-      const start=()=>{play();clean();};
-      const clean=()=>['pointerdown','keydown','scroll','touchstart'].forEach(e=>window.removeEventListener(e,start));
-      ['pointerdown','keydown','scroll','touchstart'].forEach(e=>window.addEventListener(e,start,{once:true,passive:true}));
-    });
-  })();
+const PROJECTS={smartflow:{title:'SmartFlow AI',bg:'pv1',desc:'A SaaS platform automating operational workflows for SMEs. The AI pipeline processes over 500 tasks per day, cutting manual processing time by 78% and significantly reducing staffing costs.',tags:['#AI_Automation','#SaaS_Platform','#Big_Data'],tech:['Python','FastAPI','OpenAI','PostgreSQL','Docker','React']},nexaui:{title:'NexaUI Design System',bg:'pv2',desc:'A comprehensive design system with 200+ production-ready components, built for a financial conglomerate spanning 12 digital products. Reduced UI design time by 60% while ensuring brand consistency across the entire ecosystem.',tags:['#Design_System','#Component_Library','#Figma'],tech:['Figma','React','Storybook','TypeScript','CSS Tokens','Chromatic']},botcore:{title:'BotCore Assistant',bg:'pv3',desc:'A multi-channel AI assistant (Web, Zalo, Facebook) with deep Vietnamese language understanding. Handling an average of 2,000 conversations per day with 94.7% intent classification accuracy.',tags:['#AI_Chatbot','#NLP','#Conversational_AI'],tech:['LangChain','GPT-4','FastAPI','Redis','WebSocket','Vue.js']},metrics:{title:'MetricsPro Dashboard',bg:'pv4',desc:'A real-time data analytics and dashboard system for a 50+ store retail chain. Consolidates data from 8 sources, delivers automated reports and ML-powered trend forecasting.',tags:['#Data_Analytics','#Real-time','#Business_Intelligence'],tech:['Next.js','Recharts','Apache Kafka','PostgreSQL','Python','Scikit-learn']}};
+function openModal(key){const p=PROJECTS[key];document.getElementById('modalTitle').textContent=p.title;document.getElementById('modalDesc').textContent=p.desc;document.getElementById('modalVisual').className='modal-visual '+p.bg;document.getElementById('modalTags').innerHTML=p.tags.map(t=>`<span>${t}</span>`).join('');document.getElementById('modalTech').innerHTML=p.tech.map(t=>`<span>${t}</span>`).join('');document.getElementById('modalOverlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(e){if(e&&e.target!==document.getElementById('modalOverlay')&&!e.target.classList.contains('modal-close'))return;document.getElementById('modalOverlay').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',e=>e.key==='Escape'&&closeModal());
+const navEl=document.getElementById('nav'),burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+window.addEventListener('scroll',()=>navEl.classList.toggle('solid',window.scrollY>50),{passive:true});
+navEl.classList.toggle('solid',window.scrollY>50);
+burger.addEventListener('click',()=>{navLinks.classList.toggle('open');burger.classList.toggle('open');});
+navLinks.querySelectorAll('a:not(.nav-lang):not(.nav-cta)').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');burger.classList.remove('open');}));
+const sections=['about','services','projects','process','contact'],navItems={};
+sections.forEach(id=>{const l=navLinks.querySelector(`a[href="#${id}"]`);if(l)navItems[id]=l;});
+const sectionObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&navItems[e.target.id]){Object.values(navItems).forEach(l=>l.classList.remove('active'));navItems[e.target.id].classList.add('active');}});},{threshold:.35});
+sections.forEach(id=>{const el=document.getElementById(id);if(el)sectionObs.observe(el);});
+const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');revealObs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+function animateCounter(el){const target=+el.dataset.target,suffix=el.dataset.suffix||'',dur=1800,start=performance.now();const tick=now=>{const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.round(ease*target)+suffix;if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);}
+const counterObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.stat-num[data-target]').forEach(animateCounter);counterObs.unobserve(e.target);}});},{threshold:.5});
+const statsEl=document.querySelector('.stats');if(statsEl)counterObs.observe(statsEl);
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();e.target.style.display='none';document.getElementById('formSuccess').style.display='block';});
+(function(){const canvas=document.getElementById('heroCanvas'),ctx=canvas.getContext('2d');let W,H,particles=[],mouse={x:null,y:null};const COLORS=['rgba(167,139,250,','rgba(96,165,250,','rgba(52,211,153,'],N=80,CONNECT=140;
+function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;}
+class Particle{constructor(){this.x=Math.random()*W;this.y=Math.random()*H;this.vx=(Math.random()-.5)*.5;this.vy=(Math.random()-.5)*.5;this.r=Math.random()*1.5+.8;this.c=COLORS[Math.floor(Math.random()*COLORS.length)];}update(){if(mouse.x!==null){const dx=this.x-mouse.x,dy=this.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){this.vx+=dx/d*.4;this.vy+=dy/d*.4;}}this.vx*=.98;this.vy*=.98;this.x+=this.vx;this.y+=this.vy;if(this.x<0)this.x=W;if(this.x>W)this.x=0;if(this.y<0)this.y=H;if(this.y>H)this.y=0;}draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=this.c+'.75)';ctx.fill();}}
+function init(){particles=Array.from({length:N},()=>new Particle());}
+function drawLines(){for(let i=0;i<N;i++)for(let j=i+1;j<N;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<CONNECT){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(167,139,250,${(1-d/CONNECT)*.25})`;ctx.lineWidth=.6;ctx.stroke();}}}
+function frame(){ctx.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw();});drawLines();requestAnimationFrame(frame);}
+canvas.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
+canvas.addEventListener('mouseleave',()=>{mouse.x=null;mouse.y=null;});
+window.addEventListener('resize',()=>{resize();init();});
+resize();init();frame();})();
 </script>
 </body>
 </html>
