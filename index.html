@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script>document.documentElement.dataset.theme=localStorage.getItem('tthh-theme')||'dark'</script>
 <style>
 :root{
   --bg:#0A0A0A;--bg2:#0F0F0F;--bg3:#111111;
@@ -251,6 +252,50 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 0}
   .modal-body{padding:22px 22px 28px}
   .hero h1{font-size:2.1rem}
 }
+
+/* THEME TOGGLE BUTTON */
+.theme-toggle{width:36px;height:36px;border-radius:9px;border:1px solid var(--border);background:none;display:grid;place-items:center;color:var(--g2);transition:.2s;cursor:pointer;flex:none}
+.theme-toggle:hover{border-color:var(--purple-l);color:var(--purple-l);background:rgba(124,58,237,.08)}
+.theme-toggle .icon-moon{display:none}
+.theme-toggle .icon-sun{display:block}
+html[data-theme="light"] .theme-toggle .icon-sun{display:none}
+html[data-theme="light"] .theme-toggle .icon-moon{display:block}
+
+/* ===== LIGHT MODE ===== */
+html[data-theme="light"]{
+  --bg:#F7F8FC;--bg2:#ECEDF5;--bg3:#E4E5EF;
+  --card:rgba(255,255,255,.95);--card-h:rgba(124,58,237,.05);
+  --white:#0F172A;--g1:#1E293B;--g2:#475569;--g3:#94A3B8;
+  --border:rgba(15,23,42,.09);--border-h:rgba(124,58,237,.35);
+  --glow-p:0 0 30px rgba(124,58,237,.15);--glow-b:0 0 30px rgba(37,99,235,.12);
+}
+html[data-theme="light"] body{color:var(--white)}
+html[data-theme="light"] nav.nav.solid{background:rgba(247,248,252,.92);border-bottom-color:rgba(15,23,42,.08)}
+html[data-theme="light"] .btn-outline{border-color:rgba(15,23,42,.2)}
+html[data-theme="light"] .sec-label{color:var(--purple)}
+html[data-theme="light"] .sec-label::before{background:var(--purple)}
+html[data-theme="light"] .svc-col-label.ai{color:var(--purple)}
+html[data-theme="light"] .svc-col-label.design{color:var(--mint)}
+html[data-theme="light"] .svc-card{box-shadow:0 2px 14px rgba(15,23,42,.06)}
+html[data-theme="light"] .proj-card{box-shadow:0 2px 14px rgba(15,23,42,.06)}
+html[data-theme="light"] .form-wrap{box-shadow:0 4px 20px rgba(15,23,42,.08)}
+html[data-theme="light"] .form-group input,
+html[data-theme="light"] .form-group select,
+html[data-theme="light"] .form-group textarea{background:rgba(255,255,255,.85);border-color:rgba(15,23,42,.12);color:var(--white)}
+html[data-theme="light"] .form-group select option{background:#fff;color:#0F172A}
+html[data-theme="light"] .form-group input::placeholder,
+html[data-theme="light"] .form-group textarea::placeholder{color:var(--g3)}
+html[data-theme="light"] .modal{background:#fff}
+html[data-theme="light"] .modal-overlay{background:rgba(15,23,42,.5)}
+html[data-theme="light"] .modal-close{background:rgba(255,255,255,.9);color:var(--g2);border-color:rgba(15,23,42,.1)}
+html[data-theme="light"] .modal-tags span{background:rgba(124,58,237,.07);border-color:rgba(124,58,237,.2)}
+html[data-theme="light"] .modal-tech-items span{background:rgba(15,23,42,.05);color:var(--g1);border-color:rgba(15,23,42,.1)}
+html[data-theme="light"] .proj-tags span{background:rgba(15,23,42,.05);border-color:rgba(15,23,42,.1)}
+html[data-theme="light"] .soc-btn{background:rgba(15,23,42,.04);border-color:rgba(15,23,42,.1)}
+html[data-theme="light"] footer{background:var(--bg2);border-top-color:rgba(15,23,42,.08)}
+@media(max-width:640px){
+  html[data-theme="light"] .nav-links{background:rgba(247,248,252,.97);border-bottom-color:rgba(15,23,42,.08)}
+}
 </style>
 </head>
 <body>
@@ -270,6 +315,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 0}
       <li><a href="#projects">Dự Án</a></li>
       <li><a href="#process">Quy Trình</a></li>
       <li><a href="en.html" class="nav-lang" hreflang="en">EN</a></li>
+      <li><button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện"><svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li>
       <li><a href="#contact" class="nav-cta">Tư Vấn Ngay</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Mở menu"><span></span><span></span><span></span></button>
@@ -618,6 +664,13 @@ document.getElementById('contactForm').addEventListener('submit', e => {
   document.getElementById('formSuccess').style.display = 'block';
 });
 
+// THEME TOGGLE
+document.getElementById('themeToggle').addEventListener('click',()=>{
+  const next=document.documentElement.dataset.theme==='light'?'dark':'light';
+  document.documentElement.dataset.theme=next;
+  localStorage.setItem('tthh-theme',next);
+});
+
 // CANVAS PARTICLE SYSTEM
 (function() {
   const canvas = document.getElementById('heroCanvas');
@@ -654,7 +707,7 @@ document.getElementById('contactForm').addEventListener('submit', e => {
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
-      ctx.fillStyle = this.c + '.75)';
+      ctx.fillStyle = this.c + (document.documentElement.dataset.theme==='light'?'1)':'.75)');
       ctx.fill();
     }
   }
@@ -664,12 +717,13 @@ document.getElementById('contactForm').addEventListener('submit', e => {
   }
 
   function drawLines() {
+    const maxOp = document.documentElement.dataset.theme==='light'?.4:.25;
     for (let i = 0; i < N; i++) {
       for (let j = i+1; j < N; j++) {
         const dx = particles[i].x-particles[j].x, dy = particles[i].y-particles[j].y;
         const d = Math.sqrt(dx*dx+dy*dy);
         if (d < CONNECT) {
-          const op = (1-d/CONNECT)*.25;
+          const op = (1-d/CONNECT)*maxOp;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
